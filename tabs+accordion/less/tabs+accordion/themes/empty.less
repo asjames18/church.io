@@ -1,0 +1,42 @@
+.theme-name {
+
+	&.accordion {
+
+		// panel
+		> section {
+
+			// tab
+			> :first-child {
+
+				// content
+				+ * > * {
+
+				}
+			}
+		}
+	}
+
+	&.tabs {
+
+		// panel
+		> section {
+
+			// title
+			> :first-child {
+
+				// content
+				+ * > * {
+
+				}
+			}
+		}
+
+		> ul {
+
+			// tab
+			> li {
+
+			}
+		}
+	}
+}

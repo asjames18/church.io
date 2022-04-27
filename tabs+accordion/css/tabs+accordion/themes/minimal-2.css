@@ -1,0 +1,385 @@
+/* http://nicolasgallagher.com/micro-clearfix-hack */
+.clearfix {
+  zoom: 1;
+}
+.clearfix:after {
+  clear: both;
+}
+.clearfix:after,
+.clearfix:before {
+  display: table;
+  content: "";
+}
+.minimal-2 {
+  margin-top: 0;
+  background-color: #1a1a1a;
+}
+
+.minimal-2:focus {
+  outline: none;
+}
+.minimal-2.accordion > section {
+  border: 1px solid;
+  padding: 24px;
+}
+.minimal-2.accordion > section > * {
+  max-width: 100%;
+}
+.minimal-2.accordion > section > :first-child {
+  margin-top: 0;
+}
+.js .minimal-2.accordion > section {
+  padding: 0;
+}
+.js .minimal-2.accordion > section > :first-child {
+  font-size: 15px;
+  font-weight: normal;
+  margin: 0;
+  padding: 12px 24px;
+}
+.js .minimal-2.accordion > section > :first-child + * > * {
+  border-top: none;
+  padding: 24px;
+}
+.js .minimal-2.accordion > section > :first-child + * > * > * {
+  max-width: 100%;
+}
+.js .minimal-2.accordion > section > :first-child + * > * > :first-child {
+  margin-top: 0;
+}
+.js .minimal-2.accordion > section > :first-child + * > * > :last-child {
+  margin-bottom: 0;
+}
+.minimal-2.accordion > section > :last-child {
+  margin-bottom: 0;
+}
+.minimal-2.accordion > section + section {
+  margin-top: -1px;
+}
+.minimal-2.accordion.transition > section > :first-child {
+  -webkit-transition: 0.25s 0.25s;
+  -moz-transition: 0.25s 0.25s;
+  -o-transition: 0.25s 0.25s;
+  transition: 0.25s 0.25s;
+}
+.minimal-2.tabs.cross-fade.transition > ul > li {
+  -webkit-transition: 0.25s;
+  -moz-transition: 0.25s;
+  -o-transition: 0.25s;
+  transition: 0.25s;
+}
+.js .minimal-2.tabs.hide-title > section > :first-child + * {
+  margin-top: 0;
+}
+.minimal-2.tabs > section {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  padding: 24px;
+}
+.minimal-2.tabs > section > * {
+  max-width: 100%;
+}
+.minimal-2.tabs > section > :first-child {
+  margin-top: 0;
+}
+.js .minimal-2.tabs > section > * > * > * {
+  max-width: 100%;
+}
+.js .minimal-2.tabs > section > * > * > :first-child {
+  margin-top: 0;
+}
+.js .minimal-2.tabs > section > * > * > :last-child {
+  margin-bottom: 0;
+}
+.minimal-2.tabs > section > :last-child {
+  margin-bottom: 0;
+}
+.minimal-2.tabs > section + section {
+  margin-top: -1px;
+}
+.js .minimal-2.tabs > section + section {
+  margin-top: 0;
+}
+.minimal-2.tabs > ul {
+  zoom: 1;
+  border-bottom: none;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+}
+.minimal-2.tabs > ul:after {
+  clear: both;
+}
+.minimal-2.tabs > ul:after,
+.minimal-2.tabs > ul:before {
+  display: table;
+  content: "";
+}
+
+/* PADDING AND HEIGHT FOR TABS */
+
+.minimal-2.tabs > ul > li {
+  border-bottom: none;
+  color: #b1b1b1;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  float: left;
+  font-size: 15px;
+  line-height: 48px;
+  padding: 0 24px;
+}
+.minimal-2.tabs > ul > li.current {
+  border-bottom: none;
+  color: #fff;
+  pointer-events: none;
+}
+.minimal-2.tabs > ul > li + li {
+  border-left: 0px;
+}
+.minimal-2.accordion > section {
+  border-color: #222222;
+}
+.minimal-2.accordion > section[aria-expanded="true"] > :first-child {
+  background-color: #222222;
+  color: #FFF;
+}
+.minimal-2.accordion > section > :first-child {
+  border-color: #222222;
+}
+.minimal-2.accordion > section > :first-child + * > * {
+  border-color: #222222;
+}
+.minimal-2.tabs > section {
+  border-color: #222222;
+}
+.minimal-2.tabs > ul {
+  border-color: #222222;
+}
+.minimal-2.tabs > ul > li.current {
+  background-color: #222222;
+}
+.minimal-2.tabs > ul > li + li {
+  border-left-color: #222222;
+}
+.minimal-2.apple-green.accordion > section {
+  border-color: transparent;
+}
+.minimal-2.apple-green.accordion > section[aria-expanded="true"] > :first-child {
+  background-color: #252525;
+  color: #FFFFFF;
+}
+.minimal-2.apple-green.accordion > section > :first-child {
+  border-color: transparent;
+}
+.minimal-2.apple-green.accordion > section > :first-child + * > * {
+  border-color: transparent;
+}
+.minimal-2.apple-green.tabs > section {
+  background-color: #252525;
+}
+.minimal-2.apple-green.tabs > ul {
+  border-color: transparent;
+  
+}
+.minimal-2.apple-green.tabs > ul > li.current {
+  background-color: #252525;
+}
+.minimal-2.apple-green.tabs > ul > li + li {
+  border-left-color: transparent;
+}
+
+
+
+
+.minimal-2.avocado.accordion > section {
+  border-color: #568203;
+}
+.minimal-2.avocado.accordion > section[aria-expanded="true"] > :first-child {
+  background-color: #568203;
+  color: #FFFFFF;
+}
+.minimal-2.avocado.accordion > section > :first-child {
+  border-color: #568203;
+}
+.minimal-2.avocado.accordion > section > :first-child + * > * {
+  border-color: #568203;
+}
+.minimal-2.avocado.tabs > section {
+  border-color: #568203;
+}
+.minimal-2.avocado.tabs > ul {
+  border-color: #568203;
+}
+.minimal-2.avocado.tabs > ul > li.current {
+  background-color: #568203;
+}
+.minimal-2.avocado.tabs > ul > li + li {
+  border-left-color: #568203;
+}
+.minimal-2.azure.accordion > section {
+  border-color: #007fff;
+}
+.minimal-2.azure.accordion > section[aria-expanded="true"] > :first-child {
+  background-color: #007fff;
+  color: #FFFFFF;
+}
+.minimal-2.azure.accordion > section > :first-child {
+  border-color: #007fff;
+}
+.minimal-2.azure.accordion > section > :first-child + * > * {
+  border-color: #007fff;
+}
+.minimal-2.azure.tabs > section {
+  border-color: #007fff;
+}
+.minimal-2.azure.tabs > ul {
+  border-color: #007fff;
+}
+.minimal-2.azure.tabs > ul > li.current {
+  background-color: #007fff;
+}
+.minimal-2.azure.tabs > ul > li + li {
+  border-left-color: #007fff;
+}
+.minimal-2.carrot-orange.accordion > section {
+  border-color: #ed9121;
+}
+.minimal-2.carrot-orange.accordion > section[aria-expanded="true"] > :first-child {
+  background-color: #ed9121;
+  color: #FFFFFF;
+}
+.minimal-2.carrot-orange.accordion > section > :first-child {
+  border-color: #ed9121;
+}
+.minimal-2.carrot-orange.accordion > section > :first-child + * > * {
+  border-color: #ed9121;
+}
+.minimal-2.carrot-orange.tabs > section {
+  border-color: #ed9121;
+}
+.minimal-2.carrot-orange.tabs > ul {
+  border-color: #ed9121;
+}
+.minimal-2.carrot-orange.tabs > ul > li.current {
+  background-color: #ed9121;
+}
+.minimal-2.carrot-orange.tabs > ul > li + li {
+  border-left-color: #ed9121;
+}
+.minimal-2.tomato.accordion > section {
+  border-color: #ff6347;
+}
+.minimal-2.tomato.accordion > section[aria-expanded="true"] > :first-child {
+  background-color: #ff6347;
+  color: #FFFFFF;
+}
+.minimal-2.tomato.accordion > section > :first-child {
+  border-color: #ff6347;
+}
+.minimal-2.tomato.accordion > section > :first-child + * > * {
+  border-color: #ff6347;
+}
+.minimal-2.tomato.tabs > section {
+  border-color: #ff6347;
+}
+.minimal-2.tomato.tabs > ul {
+  border-color: #ff6347;
+}
+.minimal-2.tomato.tabs > ul > li.current {
+  background-color: #ff6347;
+}
+.minimal-2.tomato.tabs > ul > li + li {
+  border-left-color: #ff6347;
+}
+
+
+
+
+@media (min-width: 1382px) and (max-width: 2000px){
+  .js .minimal-2.accordion > section > :first-child {
+  font-size: 15px;
+  }
+  
+  .minimal-2.tabs > ul > li {
+  font-size: 15px;
+  line-height: 48px;
+  padding: 0 24px;
+  }
+}
+
+@media (min-width: 1057px) and (max-width: 1382px){
+  .js .minimal-2.accordion > section > :first-child {
+  font-size: 12px;
+  }
+  
+  .minimal-2.tabs > ul > li {
+  font-size: 12px;
+  line-height: 46px;
+  padding: 0 22px;
+  }
+}
+
+@media (max-width: 1057px){
+  .js .minimal-2.accordion > section > :first-child {
+  font-size: 9px;
+  }
+  
+  .minimal-2.tabs > ul > li {
+  font-size: 9px;
+  line-height: 36px;
+  padding: 0 18px;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 960px){
+  .js .minimal-2.accordion > section > :first-child {
+  font-size: 9px;
+  }
+
+  .minimal-2.tabs > ul > li {
+  font-size: 9px;
+  line-height: 34px;
+  padding: 0 18px;
+  }
+}
+
+@media (min-width: 640px) and (max-width: 768px){
+  .js .minimal-2.accordion > section > :first-child {
+  font-size: 7px;
+  }
+
+  .minimal-2.tabs > ul > li {
+  font-size: 7px;
+  line-height: 32px;
+  padding: 0 16px;
+  }
+}
+
+
+/* MOBILE*/
+
+@media (max-width: 640px){
+  .js .minimal-2.accordion > section > :first-child {
+  font-size: inherit;
+  font-weight: normal;
+  }
+
+}
+
+@media (max-width: 480px){
+
+}
+
+@media (max-width: 320px){
+
+}
+
+
+
+

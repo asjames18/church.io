@@ -1,0 +1,130 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta name="viewport" content="width=device-width">
+	<title>Progression Audio and Video Player</title>	
+	
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script><!-- jQuery Latest -->
+	<script src="../build/mediaelement-and-player.min.js"></script><!-- Audio/Video Player jQuery -->
+	<script src="../build/mep-feature-playlist.js"></script><!-- Playlist JavaSCript -->
+	
+	<link rel="stylesheet" href="../css/progression-player.css" /><!-- Default Player Styles -->
+	<link href="../font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css" /><!-- Player Icons -->
+	
+</head>
+<body id="progression-player-preview">
+
+<h1>ProgressionPlayer - Responsive Audio/Video Player</h1>
+
+<ul id="prog-page-navigation">
+	<li><a href="index.html">Default Skin</a></li>
+	<li><a href="sizes.html">Player Sizes</a></li>
+	<li><a href="fancy-skin.html">Fancy Skin</a></li>
+	<li><a href="dark-skin.html">Dark Skin</a></li>
+	<li><a href="minimal-dark-skin.html">Minimal Dark Skin</a></li>
+	<li><a href="minimal-light-skin.html">Minimal Light Skin</a></li>
+	<li class="current-menu-item"><a href="options.html">Basic Usage</a></li>
+</ul>
+
+<h2>Options</h2>
+<ul id="progression-options">
+	<li><strong>Responsive</strong> Audio/Video Player: Mobile, Tablet and Desktop optimized <span>(Easily disable this option if necessary)</span></li>
+	<li>Custom Flash and Silverlight players that mimic the HTML5 MediaElement API for older browsers</li>
+	<li><strong>5 Skins</strong> to choose from</li>
+	<li><strong>Audio Playlists</strong> supported</li>
+	<li><strong>Unlimited players</strong> per page</li>
+	<li><strong>Retina Support</strong>: ProgressionPlayer is optimized for high resolution displays like the Macbook Pro with Retina Display, iPhones and iPads</li>
+	<li>Players automatically stop playing when another player is activated</li>
+	<li>Easy to Customize</li>
+	<li>Full-screen video button</li>
+	<li>Playlist can stay open or closed by default.</li>
+</ul>
+
+<hr>
+
+<h2>Player Options Via JavaScript</h2>
+<pre>$('video').mediaelementplayer({
+    defaultVideoWidth: 480, // if the &lt;video width&gt; is not specified, this is the default
+    defaultVideoHeight: 270, // if the &lt;video height&gt; is not specified, this is the default
+    videoWidth: -1, // if set, overrides &lt;video width&gt;
+    videoHeight: -1, // if set, overrides &lt;video height&gt;
+    audioWidth: 400, // width of audio player
+    audioHeight: 30, // height of audio player
+    startVolume: 0.8, // initial volume when the player starts
+    loop: false, // useful for &lt;audio&gt; player loops
+    enableAutosize: true, // enables Flash and Silverlight to resize to content size
+    features: ['playpause','current','progress','duration','tracks','volume','fullscreen'], // the order of controls you want on the control bar (and other plugins below)
+    alwaysShowControls: false,  // Hide controls when playing and mouse is not over the video
+    iPadUseNativeControls: false,  // force iPad's native controls
+    iPhoneUseNativeControls: false,  // force iPhone's native controls
+    AndroidUseNativeControls: false, // force Android's native controls
+    alwaysShowHours: false, // forces the hour marker (##:00:00)
+    showTimecodeFrameCount: false, // show framecount in timecode (##:00:00:00)
+    framesPerSecond: 25, // used when showTimecodeFrameCount is set to true
+    enableKeyboard: true, // turns keyboard support on and off for this instance
+    pauseOtherPlayers: true // when this player starts, it will pause other players
+ 
+});
+</pre>
+
+<hr>
+
+<h2>Installing the player is easy as 1, 2, 3!</h2>
+
+<h4>Step 1: Add Scripts and Stylesheet</h4>
+<p>
+<pre>	&lt;script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"&gt;&lt;/script&gt;&lt;!-- jQuery Latest --&gt;
+	&lt;script src="../build/mediaelement-and-player.min.js"&gt;&lt;/script&gt;&lt;!-- Audio/Video Player jQuery --&gt;
+	&lt;script src="../build/mep-feature-playlist.js"&gt;&lt;/script&gt;&lt;!-- Playlist JavaSCript --&gt;
+
+	&lt;link rel="stylesheet" href="../css/progression-player.css" /&gt;&lt;!-- Default Player Styles --&gt;
+	&lt;link href="../font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css" /&gt;&lt;!-- Player Icons --&gt;	
+</pre></p>
+
+<br>
+<h4>Step 2: Add your video or audio files.  </h4>
+<p>Video Example:
+<pre>	&lt;video  class="progression-single progression-skin" controls="controls" preload="none"&gt;
+		&lt;source src="../media/big_buck_bunny.mp4" type="video/mp4" title="mp4"&gt;
+	&lt;/video&gt;</pre>
+<p>Audio Example:
+<pre>	&lt;audio class="progression-single progression-skin progression-audio-player" controls="controls" preload="none"&gt;
+		&lt;source src="../media/indie-rock.mp3" type="audio/mp3"/&gt;
+	&lt;/audio&gt;</pre>
+</p>
+</p>
+
+
+<br>
+<h4>Step 3: Start Player via JavaScript</h4>
+<p>The .progression-single call is what activates the audio/video. 
+<pre>	&lt;script&gt;
+	$('.progression-single').mediaelementplayer({
+		audioWidth: 400, // width of audio player
+		audioHeight:40, // height of audio player
+		startVolume: 0.5, // initial volume when the player starts
+		features: ['playpause','current','progress','duration','tracks','volume','fullscreen']
+		});
+	&lt;/script&gt;</pre></p>
+<br><br>
+
+<h4>And your done creating your player!</h4>
+<audio class="progression-single progression-skin progression-audio-player" controls="controls" preload="none">
+	<source src="../media/indie-rock.mp3" type="audio/mp3"/>
+</audio>
+
+
+<script>
+$('.progression-single').mediaelementplayer({
+	audioWidth: 400, // width of audio player
+	audioHeight:40, // height of audio player
+	startVolume: 0.5, // initial volume when the player starts
+	features: ['playpause','current','progress','duration','tracks','volume','fullscreen']
+	});
+</script>
+
+
+</body>
+</html>
+

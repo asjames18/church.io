@@ -1,0 +1,63 @@
+@import url("../clearfix.less");
+@import url("../prefixed.less");
+
+.accordion {
+
+	> section {
+	display: block;
+
+		> :first-child {
+
+			+ * {
+			overflow: hidden;
+			.transition-duration(0.25s);
+			.transition-property(height);
+			}
+
+			.js & {
+			cursor: pointer;
+			}
+		}
+	}
+}
+
+.tabs {
+overflow-y: hidden;
+position: relative;
+
+	&.cross-fade.transition {
+	.transition-duration(0.25s);
+
+		> section {
+		.transition-duration(0.25s);
+		}
+	}
+
+	.js &.hide-title > section > :first-child {
+	display: none;
+	}
+
+	> section {
+	width: 100%;
+
+		.js & {
+		opacity: 0;
+		position: absolute;
+		visibility: hidden;
+		}
+
+		&[aria-expanded="true"] {
+		opacity: 1;
+		visibility: visible;
+		}
+	}
+
+	> ul {
+	position: relative;
+	z-index: 99;
+
+		> li {
+		cursor: pointer;
+		}
+	}
+}

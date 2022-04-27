@@ -1,0 +1,189 @@
+<!doctype html>
+<html lang="en" style="overflow: hidden;">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, user-scalable=0">
+
+<title>Praise Map</title>
+    
+<style type="text/css">
+html { height: 120%; }
+body { height: 120%; margin: 0; padding: 0; background: #fff; margin-top:-10%; }
+#map_canvas { margin-top: 0; }
+#map_canvas_wrap {  }
+.body { background: #fff;}
+</style>
+
+<script src="/js/libs/jquery.1.7.1.min.js"></script>
+<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?v=3&key=AIzaSyDSlhVeu2q2y2M0ZPRPXwSLLpXIvhbGCoA&libraries=geometry&sensor=false"> </script>
+<script type="text/javascript" src="http://google-maps-utility-library-v3.googlecode.com/svn/tags/infobox/1.1.9/src/infobox.js"></script>
+<script type="text/javascript">
+var directionDisplay;
+var directionsService = new google.maps.DirectionsService();
+var map;
+function initialize() {		  
+
+	var styles =   [ 
+{"featureType":"landscape","stylers":[{"saturation":-100},{"lightness":25},{"visibility":"on"}]},
+{"featureType":"road.highway","elementType":"geometry","stylers":[{"hue":"#ffaa00"},{"visibility":"on"},{"saturation":-43}]},
+{"featureType":"road.arterial","stylers":[{"saturation":-100},{"lightness":30},{"visibility":"on"}]},
+{"featureType":"road.local","stylers":[{"saturation":-100},{"lightness":40},{"visibility":"on"}]},
+{"featureType":"road.highway","elementType":"labels","stylers":[{"visibility":"simplified"},{"hue":"#ffaa00"},{"saturation":-70}]},
+{"featureType":"road.arterial","stylers":[{"visibility":"on"}]},
+{"featureType":"road","elementType":"labels.icon","stylers":[{"visibility":"off"}]},
+{"featureType":"road.highway.controlled_access","elementType":"labels","stylers":[{"visibility":"on"}]},
+{"featureType":"road","elementType":"geometry.stroke","stylers":[{"visibility":"off"}]},
+{ "featureType": "water", "stylers": [ { "visibility": "off" } ] },
+{ "featureType": "transit.station.airport", "elementType": "geometry.fill", "stylers": [ { "visibility": "on" }, { "gamma": 0.8 } ] },
+{ "featureType": "poi.park", "stylers": [ { "visibility": "off" } ] },
+{ "featureType": "poi.business", "stylers": [ { "visibility": "off" } ] },
+{"featureType":"administrative","elementType":"labels","stylers":[{"visibility":"on"},{"gamma":1.82}]},
+{"featureType":"administrative","elementType":"labels.text.stroke","stylers":[{"visibility":"off"}]},
+{"featureType":"administrative","elementType":"labels.text.fill","stylers":[{"visibility":"on"},{"gamma":1.96},{"lightness":-9}]}
+	];
+	     
+	var mapOptions = {
+	  center: new google.maps.LatLng(30.15465,-94.19154),
+		zoom: mobileDetection.ismobile ? 14 : 15,
+		disableDefaultUI: true,
+		mapTypeId: google.maps.MapTypeId.ROADMAP,
+		styles: styles,
+		scrollwheel: false
+	};
+	map = new google.maps.Map(document.getElementById("map_canvas"), mapOptions); 
+
+	setMarkers(map, campuses);
+};
+
+function centerOn(latitude, longitude, name)
+{newMarker(name);}
+
+function geocodeZip(zip)
+{
+var geocoder = new google.maps.Geocoder();
+var distances = new Array();
+geocoder.geocode( { 'address': zip }, function(results, status) {
+	if (status == google.maps.GeocoderStatus.OK) {
+		for (var i = 0; i < campuses.length; i++) {
+			distances[i] = new Object;
+			distances[i].name = campuses[i][0];
+			distances[i].loc  = new google.maps.LatLng(campuses[i][1], campuses[i][2]);
+			distances[i].dist = google.maps.geometry.spherical.computeDistanceBetween(distances[i].loc, results[0].geometry.location);
+		}
+		distances.sort(function (a,b) {return (a.dist - b.dist)});
+		parent.setCampus(distances[0].name);
+	}
+});
+return 1;
+}
+
+/**
+ * Data for the markers consisting of a name, a LatLng and a zIndex for
+ * the order in which these markers should display on top of each
+ * other.
+ */
+var campuses = [
+['praise', 30.1559, -94.19154, 1, 'Praise'],
+];
+
+function centerRegion (lat, long) {
+	var latl = new google.maps.LatLng(lat, long);
+	map.setCenter(latl);
+}
+
+function newMarker(m) {
+	//map.setCenter(m.loc);
+	for (var i = 0; i < markers.length; i++) {
+		if (campuses[i][0] == m) {
+			var image = new google.maps.MarkerImage('images/marker_logo.png' + campuses[i][0] + '.png',
+			new google.maps.Size(80, 53), // This marker is 130 pixels wide by 100 pixels tall.
+			new google.maps.Point(0, 0), // The origin for this image is 0,0.
+			new google.maps.Point(77, 23));
+			markers[i].setOptions({icon: image});
+		} else {
+			var image = new google.maps.MarkerImage('images/marker_logo.png',
+		        null, // This marker is 33 pixels wide by 33 pixels tall.
+			null, // The origin for this image is 0,0.
+			new google.maps.Point(28, 10));
+			markers[i].setOptions({icon: image});
+		}
+	google.maps.event.addListener(markers[i], 'click', function() {parent.setCampus(this.title);});
+	}
+}
+
+var markers = [], shape;
+function setMarkers(map, locations) {
+  // Add markers to the map
+
+  // Marker sizes are expressed as a Size of X,Y
+  // where the origin of the image (0,0) is located
+  // in the top left of the image.
+
+  // Origins, anchor positions and coordinates of the marker
+  // increase in the X direction to the right and in
+  // the Y direction down.
+  var image = new google.maps.MarkerImage('images/marker_logo.png',
+      null, // This marker is 33 pixels wide by 33 pixels tall.
+      null, // The origin for this image is 0,0.
+      new google.maps.Point(28, 10)); // The anchor for this image is the base of the flagpole at 0,32.
+
+      // Shapes define the clickable region of the icon.
+      // The type defines an HTML <area> element 'poly' which
+      // traces out a polygon as a series of X,Y points. The final
+      // coordinate closes the poly by connecting to the first
+      // coordinate.
+  shape = {
+      coord: [1, 1, 1, 20, 18, 20, 18 , 1],
+      type: 'poly'
+  };
+   for (var i = 0; i < locations.length; i++) {
+    var a = i;
+    var campus = locations[i];
+    var myLatLng = new google.maps.LatLng(campus[1], campus[2]);
+      markers[a] = new google.maps.Marker({
+          position: myLatLng,
+          map: map,
+          icon: image,
+          shape: shape,
+          title: campus[4],
+          slug: campus[0],
+          zIndex: campus[3]
+       });
+
+
+
+	 google.maps.event.addListener(markers[i], 'click', function() {parent.setCampus(this.slug);});
+
+   }
+}
+
+
+//mobile overrides
+var mobileDetection = {
+	isipad: /ipad/gi.test(navigator.userAgent),
+	isiphone: /iphone/gi.test(navigator.userAgent),
+	isipod: /ipod/gi.test(navigator.userAgent),
+	isandroid: /android/gi.test(navigator.userAgent),
+	
+	init: function() {
+		var self=this;
+		if (self.isipad || self.isiphone || self.isipod) {
+			$('body').addClass('ismobile iOS');
+			if (self.isipad) {$('body').addClass('iPad');}
+			if (self.isiphone) {$('body').addClass('iPhone');}
+			if (self.isipod) {$('body').addClass('iPod');}
+		}
+		if (self.isandroid) {
+			$('body').addClass('ismobile android');
+		}
+		self.ismobile = (self.isipad || self.isiphone || self.isipod || self.isandroid);
+	}
+}
+mobileDetection.init();
+
+</script>
+</head>
+<body onload="initialize()">
+<div id="map_canvas" style="width:100%; height:100%;"></div>
+</body>
+</html>

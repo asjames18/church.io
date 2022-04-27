@@ -1,0 +1,67 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta name="viewport" content="width=device-width">
+	<title>Progression Audio and Video Player</title>	
+	
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script><!-- jQuery Latest -->
+	<script src="../build/mediaelement-and-player.min.js"></script><!-- Audio/Video Player jQuery -->
+	<script src="../build/mep-feature-playlist.js"></script><!-- Playlist JavaSCript -->
+	
+	<link rel="stylesheet" href="../css/progression-player.css" /><!-- Default Player Styles -->
+	<link href="../font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css" /><!-- Player Icons -->
+	
+</head>
+<body id="progression-player-preview">
+
+<h1>ProgressionPlayer - Responsive Audio/Video Player</h1>
+
+<ul id="prog-page-navigation">
+	<li><a href="index.html">Default Skin</a></li>
+	<li><a href="sizes.html">Player Sizes</a></li>
+	<li><a href="fancy-skin.html">Fancy Skin</a></li>
+	<li><a href="dark-skin.html">Dark Skin</a></li>
+	<li><a href="minimal-dark-skin.html">Minimal Dark Skin</a></li>
+	<li><a href="minimal-light-skin.html">Minimal Light Skin</a></li>
+	<li><a href="options.html">Basic Usage</a></li>
+</ul>
+
+<h2>Track Title Example</h2>
+
+<p>If you want a built-in track title, see our examples below.  The styles for this are located under 02. Width Customization in progression-player.css.</p><br>
+
+<h3>Audio Player</h3>
+<div class="responsive-wrapper responsive-audio">
+<audio class="progression-single progression-skin progression-audio-player" controls="controls" preload="none">
+	<source src="../media/AirReview-Landmarks-02-ChasingCorporate.mp3" type="audio/mp3"/>
+</audio>
+<div class="progression-single-title">Artist - Track Title</div>
+</div><!-- close .responsive-wrapper .responsive-audio -->
+
+<br><br>
+
+<h3>Video Player</h3>
+<div class="responsive-wrapper">
+<video style="width: 100%; height: 100%;" class="progression-single progression-skin" controls="controls" preload="none" poster="../media/big_buck_bunny.jpg">
+	<source src="../media/big_buck_bunny.mp4" type="video/mp4" title="mp4">
+	<source src="../media/big_buck_bunny.webm" type="video/webm" title="webm">
+</video>
+<div class="progression-single-title">Artist - Track Title</div>
+</div><!-- close .responsive-wrapper -->
+
+
+<script>
+$('.progression-single').mediaelementplayer({
+	audioWidth: 400, // width of audio player
+	audioHeight:40, // height of audio player
+	startVolume: 0.5, // initial volume when the player starts
+	features: ['playpause','current','progress','duration','tracks','volume','fullscreen']
+	});
+</script>
+
+
+
+</body>
+</html>
+

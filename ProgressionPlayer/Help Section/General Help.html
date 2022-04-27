@@ -1,0 +1,428 @@
+<!doctype html>  
+<!--[if IE 6 ]><html lang="en-us" class="ie6"> <![endif]-->
+<!--[if IE 7 ]><html lang="en-us" class="ie7"> <![endif]-->
+<!--[if IE 8 ]><html lang="en-us" class="ie8"> <![endif]-->
+<!--[if (gt IE 7)|!(IE)]><!-->
+<html lang="en-us"><!--<![endif]-->
+<head>
+	<meta charset="utf-8">
+	
+	<title>Theme Documentation</title>
+	
+	<meta name="description" content="Thank you">
+	<meta name="author" content="Progression Studios">
+	<meta name="copyright" content="Progression Studios">
+	<meta name="generator" content="Documenter v1.4 http://rxa.li/documenter">
+	<meta name="date" content="2011-08-19T00:00:00+02:00">
+	
+	<link rel="stylesheet" href="assets/css/documenter_style.css" media="all">
+	
+	<script src="assets/js/jquery.1.5.1.js"></script>
+	
+	<script src="assets/js/jquery.scrollTo-1.4.2-min.js"></script>
+	<script src="assets/js/jquery.easing.js"></script>
+	
+	
+	<script>document.createElement('section');var duration=500,easing='swing';</script>
+	<script src="assets/js/script.js"></script>
+	
+	<style>
+		html{background-color:#FFFFFF;color:#383838;}
+		::-moz-selection{background:#444444;color:#DDDDDD;}
+		::selection{background:#444444;color:#DDDDDD;}
+		#documenter_sidebar #documenter_logo{background-image:url();}
+		a{color:#0000FF;}
+		hr{border-top:1px solid #EBEBEB;border-bottom:1px solid #FFFFFF;}
+		#documenter_sidebar, #documenter_sidebar ol a{background-color:#DDDDDD;color:#222222;}
+		#documenter_sidebar ol a{-webkit-text-shadow:1px 1px 0px #EEEEEE;-moz-text-shadow:1px 1px 0px #EEEEEE;text-shadow:1px 1px 0px #EEEEEE;}
+		#documenter_sidebar ol{border-top:1px solid #AAAAAA;}
+		#documenter_sidebar ol a{border-top:1px solid #EEEEEE;border-bottom:1px solid #AAAAAA;color:#444444;}
+		#documenter_sidebar ol a:hover{background:#444444;color:#DDDDDD;border-top:1px solid #444444;}
+		#documenter_sidebar ol a.current{background:#444444;color:#DDDDDD;border-top:1px solid #444444;}
+		#documenter_copyright{display:block !important;visibility:visible !important;}
+		pre {overflow:auto; background:#f2f2f2;}
+	</style>
+	
+</head>
+<body>
+	<div id="documenter_sidebar">
+		
+		
+		
+
+		<a href="#documenter_cover" id="documenter_logo" ></a>
+		
+		<ol id="documenter_nav">
+			<li><a class="current" href="#documenter_cover">Start</a></li>
+			<li><a href="#installation">Player Installation</a></li>
+			<li><a href="#examples">Examples</a></li>
+			<li><a href="#video_player">Video</a></li>
+			<li><a href="#audio">Audio</a></li>
+			<li><a href="#playlist">Audio PlayList</a></li>
+			<li><a href="#responsive">Responsive Player</a></li>
+			<li><a href="#sizes">Player Sizes</a></li>
+			<li><a href="#skins">Custom Skins</a></li>
+			<li><a href="#sources_and_credits">Sources and Credits</a></li>
+		</ol>
+		
+		<div id="documenter_copyright">&copy;2013 ProgressionStudios<br>
+		made with the <a href="http://rxa.li/documenter">Documenter v1.4</a> 
+		</div><!-- close #documenter_copyright -->
+	</div><!-- close #documenter_sidebar -->
+	
+	
+	
+	
+	
+	<div id="documenter_content">
+		
+		<section id="documenter_cover">
+			<h1>ProgressionPlayer - Responsive Audio/Video Player</h1>
+			<h2>By Progression Studios</h2>
+			<hr>
+			<ul><li>Created: 6/25/2013</li>
+				<li>Email: <a href="mailto:mike@progressionstudios.com">mike@progressionstudios.com</a></li>
+				<li><a href="http://support.progressionstudios.com/" target="_blank">Visit our Support Forum</a></li>
+			</ul>
+			<p>Thank you for purchasing this file. If you have any questions that are beyond the scope of this help file, <a href="http://support.progressionstudios.com/" target="_blank"><strong>visit our support forum</strong></a>. </p>
+		
+
+			
+	
+		</section>
+		
+		
+		
+		<section id="installation">
+			<h3>Player Installation</h3>
+			<hr class="notop">
+			
+			<p>Installing the player is easy as 1, 2, 3!  Alternatively you can read more about the player here: <a href="http://mediaelementjs.com" target="_blank">http://mediaelementjs.com</a></p>
+			
+
+<h4>Step 1: Add Scripts and Stylesheet</h4>
+<p>
+<pre>	&lt;script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"&gt;&lt;/script&gt;&lt;!-- jQuery Latest --&gt;
+	&lt;script src="../build/mediaelement-and-player.min.js"&gt;&lt;/script&gt;&lt;!-- Audio/Video Player jQuery --&gt;
+	&lt;script src="../build/mep-feature-playlist.js"&gt;&lt;/script&gt;&lt;!-- Playlist JavaSCript --&gt;
+
+	&lt;link rel="stylesheet" href="../css/progression-player.css" /&gt;&lt;!-- Default Player Styles --&gt;
+	&lt;link href="../font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css" /&gt;&lt;!-- Player Icons --&gt;	
+</pre></p>
+
+<br>
+<h4>Step 2: Add your video or audio files.  </h4>
+<p>Video Example:
+<pre>	&lt;video  class="progression-single progression-skin" controls="controls" preload="none"&gt;
+		&lt;source src="../media/big_buck_bunny.mp4" type="video/mp4" title="mp4"&gt;
+	&lt;/video&gt;</pre>
+<p>Audio Example:
+<pre>	&lt;audio class="progression-single progression-skin progression-audio-player" controls="controls" preload="none"&gt;
+		&lt;source src="../media/indie-rock.mp3" type="audio/mp3"/&gt;
+	&lt;/audio&gt;</pre>
+</p>
+</p>
+
+
+<br>
+<h4>Step 3: Start Player via JavaScript</h4>
+<p>The .progression-single call is what activates the audio/video. 
+<pre>	&lt;script&gt;
+	$('.progression-single').mediaelementplayer({
+		audioWidth: 400, // width of audio player
+		audioHeight:40, // height of audio player
+		startVolume: 0.5, // initial volume when the player starts
+		features: ['playpause','current','progress','duration','tracks','volume','fullscreen']
+		});
+	&lt;/script&gt;</pre></p>
+<br><br>
+	
+	
+	<br><br><br>
+	<h4>Video Not Playing? Setup MIME-types on your web server</h4>		
+
+<p>On Linux/Apache servers, create a filed called .htaccess with the following text and upload it to the root of your website</p>
+<pre>AddType video/ogg .ogv
+AddType video/mp4 .mp4
+AddType video/webm .webm</pre>
+
+<p>On Windows/IIS servers, pleaes follow Microsoft's instructions on how to add/edit MIME types on <a href="http://www.microsoft.com/technet/prodtechnol/windowsserver2003/library/IIS/eb5556e2-f6e1-4871-b9ca-b8cf6f9c8134.mspx" target="_blank">IIS6</a> and <a href="http://technet.microsoft.com/en-us/library/cc725608(v=ws.10).aspx" target="_blank">IIS7</a>.</p>
+<h6><strong>Setup for Local Files (and Flash)</strong></h6>
+<P>If you are working with local files and plan to test Flash playback, make sure you go to the <a href="http://www.macromedia.com/support/documentation/en/flashplayer/help/settings_manager04.html" target="_blank">Flash Security Settings</a> page and add your working directory. Also, things tend to work best when you use absolute paths.</P>
+
+<br><br><br>
+<h4>Optional Step: Player Options Via JavaScript</h4>
+<pre>$('video').mediaelementplayer({
+    defaultVideoWidth: 480, // if the &lt;video width&gt; is not specified, this is the default
+    defaultVideoHeight: 270, // if the &lt;video height&gt; is not specified, this is the default
+    videoWidth: -1, // if set, overrides &lt;video width&gt;
+    videoHeight: -1, // if set, overrides &lt;video height&gt;
+    audioWidth: 400, // width of audio player
+    audioHeight: 30, // height of audio player
+    startVolume: 0.8, // initial volume when the player starts
+    loop: false, // useful for &lt;audio&gt; player loops
+    enableAutosize: true, // enables Flash and Silverlight to resize to content size
+    features: ['playpause','current','progress','duration','tracks','volume','fullscreen'], // the order of controls you want on the control bar (and other plugins below)
+    alwaysShowControls: false,  // Hide controls when playing and mouse is not over the video
+    iPadUseNativeControls: false,  // force iPad's native controls
+    iPhoneUseNativeControls: false,  // force iPhone's native controls
+    AndroidUseNativeControls: false, // force Android's native controls
+    alwaysShowHours: false, // forces the hour marker (##:00:00)
+    showTimecodeFrameCount: false, // show framecount in timecode (##:00:00:00)
+    framesPerSecond: 25, // used when showTimecodeFrameCount is set to true
+    enableKeyboard: true, // turns keyboard support on and off for this instance
+    pauseOtherPlayers: true // when this player starts, it will pause other players
+ 
+});
+</pre>
+
+<br>
+<iframe src="http://www.screenr.com/embed/B8dH" width="650" height="396" frameborder="0"></iframe>
+
+<br><br>
+
+			
+		</section>
+		
+		<section id="examples">
+			<h3>Examples</h3>
+			<hr class="notop">
+			<p>We have built a bunch of examples in the <strong>/demo </strong>folder.  Here is a list with brief explanation:</p>
+			<ul>
+				<li>dark-skin.html - <strong>Dark Skin Example</strong></li>
+				<li>fancy-skin.html - <strong>Fancy Skin Example</strong></li>
+				<li>index.html - <strong>Default Player Example</strong></li>
+				<li>minimal-dark-skin.html - <strong>Minimal Dark Skin Example</strong></li>
+				<li>minimal-light-skin.html - <strong>Minimal Light Skin Example</strong></li>
+				<li>options.html - <strong>How-to Install the Player</strong></li>
+				<li>playlist.html - <strong>Audio PlayList Example</strong></li>
+				<li>responsive-example.html - <strong>Responsive Example</strong></li>
+				<li>sizes.html - <strong>Player Sizes Example</strong></li>
+				<li>static-example.html - <strong>Static Player Example</strong></li>
+				<li>track-listing.html - <strong>Track Listing Option</strong></li>
+				<li>youtube-example.html - <strong>Youtube Wrapper Example</strong></li>
+			</ul>
+			
+		</section>
+		
+		
+		<section id="video_player">
+			<h3>Video</h3>
+			<hr class="notop">
+			
+			<p>For a simple video, you just need to include a .mp4 file.  This is the easist route for all browsers and mobile devices.  To see additional information, check out the Browser and Device Support section of the site: <a href="http://mediaelementjs.com" target="_blank">http://mediaelementjs.com</a></p>
+			
+
+<pre>&lt;video  class="progression-single progression-skin" controls="controls" preload="none"&gt;
+	&lt;source src="../media/big_buck_bunny.mp4" type="video/mp4" title="mp4"&gt;
+&lt;/video&gt;</pre>	
+
+	<br>
+	<p>Then the JavaScript to activate this would be:</p>
+	
+
+<pre>&lt;script&gt;
+$('.progression-single').mediaelementplayer({
+	audioWidth: 400, // width of audio player
+	audioHeight:40, // height of audio player
+	startVolume: 0.5, // initial volume when the player starts
+	features: ['playpause','current','progress','duration','tracks','volume','fullscreen']
+	});
+&lt;/script&gt;</pre>
+	
+		</section>
+		
+	
+		
+		<section id="audio">
+			<h3>Audio</h3>
+			<hr class="notop">
+			
+
+<p>Adding an audio file is very easy.  You just need to add the code below with a .mp3 file.</p>
+
+
+			<pre>&lt;audio class="progression-single progression-skin progression-audio-player" controls="controls" preload="none"&gt;
+	&lt;source src="../media/indie-rock.mp3" type="audio/mp3"/&gt;
+&lt;/audio&gt;</pre>
+
+	<br>
+	<p>Then the JavaScript to activate this would be:</p>
+	
+
+<pre>&lt;script&gt;
+$('.progression-single').mediaelementplayer({
+	audioWidth: 400, // width of audio player
+	audioHeight:40, // height of audio player
+	startVolume: 0.5, // initial volume when the player starts
+	features: ['playpause','current','progress','duration','tracks','volume','fullscreen']
+	});
+&lt;/script&gt;</pre>
+
+		</section>
+		
+		
+		
+		
+		<section id="playlist">
+			<h3>Audio Playlist</h3>
+			<hr class="notop">
+			
+
+<p>Adding an playlist involves the code below.  The title tag is where the mp3 title will be pulled from.  You can adjust the player height via the padding-bottom tag.</p>
+
+
+
+<pre>&lt;div class="progression-playlist-height responsive-wrapper responsive-audio" style="padding-bottom:174px;"&gt;&lt;!-- Adjust padding-bottom as needed so the playlist doesn't cover content below --&gt;
+&lt;audio class="progression-playlist progression-skin progression-audio-player" controls="controls" preload="none"&gt;
+	&lt;source src="../media/AirReview-Landmarks-02-ChasingCorporate.mp3" title="Cheer Up by sevenfoursounds" type="audio/mpeg"/&gt;
+	&lt;source src="../media/indie-rock.mp3" title="Indie rock by AdamCaptured" type="audio/mpeg"/&gt;
+	&lt;source src="../media/winner-preview.mp3" title="Winner by kristijanf" type="audio/mpeg"/&gt;
+	&lt;source src="../media/get-out-of-my-way-preview.mp3" title="Get Out of My Way by AdamCaptured" type="audio/mpeg"/&gt;
+	&lt;source src="../media/positive-thinking-preview.mp3" title="Positive Thinking by BeatheBeat" type="audio/mpeg"/&gt;
+	&lt;source src="../media/glitchy-digital-preview.mp3" title="Glitchy Digital Crystal Logo #07 by alkis" type="audio/mpeg"/&gt;
+&lt;/audio&gt;
+&lt;/div&gt;&lt;!-- close .responsive-wrapper --&gt;
+</pre>
+
+
+	<br>
+	<p>Start Playlist via JavaScript:</p>
+	
+
+
+<pre>&lt;script>
+$('.progression-playlist').mediaelementplayer({
+	audioWidth: 400, // width of audio player
+	audioHeight:40, // height of audio player
+	startVolume: 0.5, // initial volume when the player starts
+	loop: false, // useful for &lt;audio> player loops
+	features: ['playlistfeature', 'prevtrack', 'playpause', 'nexttrack','current', 'progress', 'duration', 'volume', 'playlist'],
+	playlist: true, //Playlist Show
+	playlistposition: 'bottom' //Playlist Location
+	});
+&lt;/script></pre>
+
+
+
+<br><br>
+<h4>Optional:  Playlist Closed at start</h4>
+<p>If you want a playlist closed at the start, you will need to set "playlist: true, //Playlist Show" to false.</p>
+<p>In addition you will need to change the inline padding-bottom to 0px;.</p>
+<p>Lastly, you will edit<strong> /css/progression-player.css</strong> under section "<strong>02. Easy Customization</strong>".  You will add in the height of your playlist. Example: 
+	<pre>.active-progression {padding-bottom:174px !important;  }</pre></p>
+
+
+			
+		</section>
+		
+		<section id="responsive">
+			<h3>Responsive Player</h3>
+			<hr class="notop">
+
+<p>To add responsive styling, simple add the "responsive-wrapper".</p>
+<pre>&lt;div <strong>class="responsive-wrapper"</strong>&gt;</pre>
+<br>
+<p><strong>Audio/Playlist Player</strong>: The audio player requires an additional class of "responsive-audio".</p>
+<pre>&lt;div class="responsive-wrapper responsive-audio"&gt;
+&lt;audio class="progression-single progression-skin progression-audio-player" controls="controls" preload="none"&gt;
+	&lt;source src="../media/AirReview-Landmarks-02-ChasingCorporate.mp3" type="audio/mp3"/&gt;
+&lt;/audio&gt;
+&lt;/div&gt;&lt;!-- close .responsive-wrapper .responsive-audio --&gt;</pre><br>
+
+<p><strong>Video Player</strong>: The video player requires some inline styles to set 100% width and height.</p>
+<pre>&lt;div class="responsive-wrapper"&gt;
+&lt;video style="width: 100%; height: 100%;" class="progression-single progression-skin" controls="controls" preload="none" poster="../media/big_buck_bunny.jpg"&gt;
+	&lt;source src="../media/big_buck_bunny.mp4" type="video/mp4" title="mp4"&gt;
+	&lt;source src="../media/big_buck_bunny.webm" type="video/webm" title="webm"&gt;
+&lt;/video&gt;
+&lt;/div&gt;&lt;!-- close .responsive-wrapper --&gt;</pre>
+<br>
+			
+		</section>
+		
+		
+		<section id="sizes">
+			<h3>Player Sizes</h3>
+			<hr class="notop">
+			
+
+<P>You can activate the small player by surrounding the audio/video in a div with a class of "progression-small".</P>
+<pre>&lt;div class="progression-small"&gt;
+    Audio/Video Content goes in between.
+&lt;/div&gt;</pre>
+<p><strong>Note</strong>:  You must also adjust the audioheigiht via javscript (30 is the height of the small player):</p>
+<pre>audioHeight:30, // height of audio player</pre>
+<br><br>
+<h4>Responsive Width Adjustment</h4>
+<P>You can easily adjust the responsive width via the /css/progression-player.css file at the top. (Section 02. Easy Customization). If you want custom widths per play, use the inline method shown below.  </P>
+<pre>&lt;div class="responsive-wrapper" <strong>style="max-width:400px;"</strong>&gt;</pre>
+<br><br>
+<h4>Non-Responsive Width Adjustment</h4>
+<P>You can adjust the non-responsive width via the javascript at the bottom of the page. </P>
+<pre>defaultVideoWidth: 480, // if the &lt;video width&gt; is not specified, this is the default
+defaultVideoHeight: 270,    // if the &lt;video height&gt; is not specified, this is the default
+audioWidth: 400, // width of audio player
+audioHeight:40, // height of audio player</pre>
+			
+			<br><br>
+			<iframe src="http://www.screenr.com/embed/m8dH" width="650" height="396" frameborder="0"></iframe>
+			
+			<br><br>
+			
+		</section>
+		
+		
+		<section id="skins">
+			<h3>Custom Skins</h3>
+			<hr class="notop">
+			
+
+<h4>Step 1: Add CSS Stylesheet</h4>
+<P>The 5 skins that come with the theme are easy to add.  The first step involves adding the skin style-sheet to the &lt;head&gt; of your document:<p>
+			<pre>&lt;link rel="stylesheet" href="../css/skin-minimal-dark.css" /&gt;&lt;!-- Minimal Dark Skin --&gt;</pre>
+			
+			<br><br>
+<h4>Step 2: Add skin class to player</h4>		
+			
+<p>Add a class to your audio/video container.  This class is to be placed in the same list of classes as "<strong>progression-skin</strong>".  Example:</p>
+
+<p><pre>&lt;audio class="progression-single progression-skin <strong>progression-minimal-dark</strong> progression-audio-player" controls="controls" preload="none"&gt;
+	&lt;source src="../media/cheer-up-preview.mp3" type="audio/mp3"/&gt;
+&lt;/audio&gt;</pre>			
+		
+			
+			<br><br>
+			
+			<iframe src="http://www.screenr.com/embed/08dH" width="650" height="396" frameborder="0"></iframe>
+			
+			<br><br>
+			
+		</section>
+		
+		
+
+		
+		<section id="sources_and_credits">
+			<h3>Sources and Credits</h3>
+			<hr class="notop">
+			<p>I've used the following images, icons or other files as listed.</p>
+			<ul>
+				<li><a href="http://mediaelementjs.com" target="_blank">Media Element Player</a></li>
+				<li><a href="https://github.com/JeyKeu/mep-feature-playlist" target="_blank">MEP Feature Playlist</a></li>
+				<li><a href="http://fortawesome.github.io/Font-Awesome/" target="_blank">Font Awesome Icons</a></li>
+				<li><a href="http://audiojungle.net/item/indie-rock/62661" target="_blank">Indie rock by AdamCaptured:</a></li>
+				<li><a href="http://audiojungle.net/item/winner/97821" target="_blank">Winner by kristijanf</a></li>
+				<li><a href="http://audiojungle.net/item/get-out-of-my-way/62484" target="_blank">Get Out of My Way by AdamCaptured</a></li>
+				<li><a href="http://audiojungle.net/item/positive-thinking/94451" target="_blank">Positive Thinking by BeatheBeat</a></li>
+				<li><a href="http://audiojungle.net/item/cheer-up/179657" target="_blank">Cheer Up by sevenfoursounds</a></li>
+				<li><a href="http://audiojungle.net/item/glitchy-digital-crystal-logo-07/129056" target="_blank">Glitchy Digital Crystal Logo #07 by alkis</a></li>
+			</ul>
+			<hr class="notop">
+			<p>Once again, thank you so much for purchasing this theme. As I said at the beginning, I'd be glad to help you if you have any questions relating to this theme. No guarantees, but I'll do my best to assist. Feel free to rate my template as 5 out of 5 stars. If it's not a 5 of out 5, e-mail me and let me know what I can do to improve your experience.</p>
+			<p><strong>Michael Garcia</strong>, <a href="mailto:mike@progressionstudios.com">mike@progressionstudios.com</a></p>
+			<p><a href="http://support.progressionstudios.com/" target="_blank">Support Forum</a></p>
+		</section>
+	</div><!-- close #documenter_content -->
+</body>
+</html>

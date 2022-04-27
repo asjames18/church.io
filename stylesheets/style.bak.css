@@ -1,0 +1,96 @@
+@media (min-width: 1200px) {
+  .span12, .container {
+    width: 960px;
+  }
+}
+
+/*FEATURES*/
+.features-inner-white{
+	background: #fff;
+}
+.features-block{
+
+}
+.services-block h4{
+	background: #911D43;
+	border-radius: 5px;
+    color: #FFFFFF;
+    font-family: "Carto_Sans_Book";
+    font-size: 24px;
+    font-weight: normal;
+    line-height: 28px;
+    margin-top: 5px;
+    padding-bottom: 5px;
+    padding-top: 5px;
+    
+}
+.tab-content{
+	background: #14726C;
+	padding: 20px;
+	color: #fff !important;
+	border-bottom-right-radius: 5px;
+	border-bottom-left-radius: 5px;
+	border-top-right-radius: 5px;
+	margin-bottom: 20px;
+}
+.tabbable .nav{
+	margin-bottom: 0px !important;
+}
+.nav-tabs {
+    border-bottom: none;
+}
+.nav-tabs > li > a {
+	background: #fff;
+    border: 1px solid transparent;
+    border-radius: 4px 4px 0 0;
+    line-height: 20px;
+    padding-bottom: 8px;
+    padding-top: 8px;
+}
+.nav-tabs > .active > a, .nav-tabs > .active > a:hover {
+    -moz-border-bottom-colors: none;
+    -moz-border-left-colors: none;
+    -moz-border-right-colors: none;
+    -moz-border-top-colors: none;
+    background-color: #14726C;
+    border-color: #14726C;
+    border-image: none;
+    border-style: solid;
+    border-width: 1px;
+    color: #fff;
+    cursor: default;
+}
+/* small screen */
+@media screen and (max-width: 600px) {
+}
+
+@media screen and (max-width: 760px) {
+}
+
+@media only screen and (max-width: 767px)  {
+}
+
+/*RESPONSIVE*/
+@media only screen and (max-width: 767px)  {
+}
+
+
+/* small screen */
+@media screen and (max-width: 600px) {
+	.nav-tabs > li, .nav-pills > li {
+    float: none;
+    display: block;
+	}
+}
+
+@media screen and (max-width: 767px) {
+}
+
+
+
+
+
+
+
+
+

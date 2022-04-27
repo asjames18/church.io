@@ -1,0 +1,102 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta name="viewport" content="width=device-width">
+	<title>Progression Audio and Video Player</title>	
+	
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script><!-- jQuery Latest -->
+	<script src="../build/mediaelement-and-player.min.js"></script><!-- Audio/Video Player jQuery -->
+	<script src="../build/mep-feature-playlist.js"></script><!-- Playlist JavaSCript -->
+	
+	<link rel="stylesheet" href="../css/progression-player.css" /><!-- Default Player Styles -->
+	<link href="../font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css" /><!-- Player Icons -->
+	
+</head>
+<body id="progression-player-preview">
+
+<h1>ProgressionPlayer - Responsive Audio/Video Player</h1>
+
+<ul id="prog-page-navigation">
+	<li><a href="index.html">Default Skin</a></li>
+	<li><a href="sizes.html">Player Sizes</a></li>
+	<li><a href="fancy-skin.html">Fancy Skin</a></li>
+	<li><a href="dark-skin.html">Dark Skin</a></li>
+	<li><a href="minimal-dark-skin.html">Minimal Dark Skin</a></li>
+	<li><a href="minimal-light-skin.html">Minimal Light Skin</a></li>
+	<li><a href="options.html">Basic Usage</a></li>
+</ul>
+
+<h2>Setting up Playlist</h2>
+
+<h3>Step 1:  Create the playlist:</h3>
+<p>Create the playlist with HTML.  The key class that is unique from the other players is "progression-playlist". Also, the title="" tag displays the title in the playlist.</p>
+
+<p>You can adjust the playlist height via the inline style of style="padding-bottom:174px;".</p>
+
+<pre>&lt;div class="progression-playlist-height responsive-wrapper responsive-audio" style="padding-bottom:174px;"&gt;&lt;!-- Adjust padding-bottom as needed so the playlist doesn't cover content below --&gt;
+&lt;audio class="progression-playlist progression-skin progression-audio-player" controls="controls" preload="none"&gt;
+	&lt;source src="../media/AirReview-Landmarks-02-ChasingCorporate.mp3" title="Cheer Up by sevenfoursounds" type="audio/mpeg"/&gt;
+	&lt;source src="../media/indie-rock.mp3" title="Indie rock by AdamCaptured" type="audio/mpeg"/&gt;
+	&lt;source src="../media/winner-preview.mp3" title="Winner by kristijanf" type="audio/mpeg"/&gt;
+	&lt;source src="../media/get-out-of-my-way-preview.mp3" title="Get Out of My Way by AdamCaptured" type="audio/mpeg"/&gt;
+	&lt;source src="../media/positive-thinking-preview.mp3" title="Positive Thinking by BeatheBeat" type="audio/mpeg"/&gt;
+	&lt;source src="../media/glitchy-digital-preview.mp3" title="Glitchy Digital Crystal Logo #07 by alkis" type="audio/mpeg"/&gt;
+&lt;/audio&gt;
+&lt;/div&gt;&lt;!-- close .responsive-wrapper --&gt;
+</pre><br>
+
+<h3>Step 2:  Start Playlist via JavaScript</h3>
+<pre>&lt;script>
+$('.progression-playlist').mediaelementplayer({
+	audioWidth: 400, // width of audio player
+	audioHeight:40, // height of audio player
+	startVolume: 0.5, // initial volume when the player starts
+	loop: false, // useful for &lt;audio> player loops
+	features: ['playlistfeature', 'prevtrack', 'playpause', 'nexttrack','current', 'progress', 'duration', 'volume', 'playlist'],
+	playlist: true, //Playlist Show
+	playlistposition: 'bottom' //Playlist Location
+	});
+&lt;/script></pre>
+
+<br>
+<h3>Audio Playlist</h3>
+
+<div class="progression-playlist-height responsive-wrapper responsive-audio" style="padding-bottom:174px;"><!-- Adjust padding-bottom as needed so the playlist doesn't cover content below -->
+<audio class="progression-playlist progression-skin progression-audio-player" controls="controls" preload="none">
+	<source src="../media/AirReview-Landmarks-02-ChasingCorporate.mp3" title="Cheer Up by sevenfoursounds" type="audio/mpeg"/>
+	<source src="../media/AirReview-Landmarks-02-ChasingCorporate.mp3" title="Indie rock by AdamCaptured" type="audio/mpeg"/>
+	<source src="../media/AirReview-Landmarks-02-ChasingCorporate.mp3" title="Winner by kristijanf" type="audio/mpeg"/>
+	<source src="../media/AirReview-Landmarks-02-ChasingCorporate.mp3" title="Get Out of My Way by AdamCaptured" type="audio/mpeg"/>
+	<source src="../media/AirReview-Landmarks-02-ChasingCorporate.mp3" title="Positive Thinking by BeatheBeat" type="audio/mpeg"/>
+	<source src="../media/AirReview-Landmarks-02-ChasingCorporate.mp3" title="Glitchy Digital Crystal Logo #07 by alkis" type="audio/mpeg"/>
+</audio>
+</div><!-- close .responsive-wrapper -->
+
+<script>
+$('.progression-playlist').mediaelementplayer({
+	audioWidth: 400, // width of audio player
+	audioHeight:40, // height of audio player
+	startVolume: 0.5, // initial volume when the player starts
+	loop: false, // useful for <audio> player loops
+	features: ['playlistfeature', 'prevtrack', 'playpause', 'nexttrack','current', 'progress', 'duration', 'volume', 'playlist'],
+	playlist: true, //Playlist Show
+	playlistposition: 'bottom' //Playlist Location
+	});
+</script>
+
+
+
+<br><br>
+<h3>Optional:  Playlist Closed at start</h3>
+<p>If you want a playlist closed at the start, you will need to set "playlist: true, //Playlist Show" to false.</p>
+<p>In addition you will need to change the inline padding-bottom to 0px;.</p>
+<p>Lastly, you will edit<strong> /css/progression-player.css</strong> under section "<strong>02. Easy Customization</strong>".  You will add in the height of your playlist. Example: 
+	<pre>.active-progression {padding-bottom:174px !important;  }</pre></p>
+
+
+
+
+</body>
+</html>
+

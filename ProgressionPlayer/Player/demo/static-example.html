@@ -1,0 +1,90 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta name="viewport" content="width=device-width">
+	<title>Progression Audio and Video Player</title>	
+	
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script><!-- jQuery Latest -->
+	<script src="../build/mediaelement-and-player.min.js"></script><!-- Audio/Video Player jQuery -->
+	<script src="../build/mep-feature-playlist.js"></script><!-- Playlist JavaSCript -->
+	
+	<link rel="stylesheet" href="../css/progression-player.css" /><!-- Default Player Styles -->
+	<link href="../font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css" /><!-- Player Icons -->
+	
+</head>
+<body id="progression-player-preview">
+
+<h1>ProgressionPlayer - Responsive Audio/Video Player</h1>
+
+<ul id="prog-page-navigation">
+	<li><a href="index.html">Default Skin</a></li>
+	<li><a href="sizes.html">Player Sizes</a></li>
+	<li><a href="fancy-skin.html">Fancy Skin</a></li>
+	<li><a href="dark-skin.html">Dark Skin</a></li>
+	<li><a href="minimal-dark-skin.html">Minimal Dark Skin</a></li>
+	<li><a href="minimal-light-skin.html">Minimal Light Skin</a></li>
+	<li><a href="options.html">Basic Usage</a></li>
+</ul>
+
+<h3>Removing Responsive Styles</h3>
+<p>Removing the responsive styles is easy.  Just remove the responsive-wrapper container.  </p>
+<br>
+
+<h3>Audio Player</h3>
+<audio class="progression-single progression-skin progression-audio-player" controls="controls" preload="none">
+	<source src="../media/AirReview-Landmarks-02-ChasingCorporate.mp3" type="audio/mp3"/>
+</audio>
+
+<br><br>
+
+<h3>Video Player</h3>
+<video class="progression-single progression-skin" controls="controls" preload="none">
+	<source src="../media/big_buck_bunny.mp4" type="video/mp4" title="mp4">
+	<source src="../media/big_buck_bunny.webm" type="video/webm" title="webm">
+</video>
+
+<br><br>
+
+<h3>Audio Playlist</h3>
+<div class="progression-playlist-height" style="padding-bottom:174px;"><!-- Adjust padding-bottom as needed so the playlist doesn't cover content below -->
+<audio class="progression-playlist progression-skin progression-audio-player" controls="controls" preload="none">
+	<source src="../media/AirReview-Landmarks-02-ChasingCorporate.mp3" title="Cheer Up by sevenfoursounds" type="audio/mpeg"/>
+	<source src="../media/AirReview-Landmarks-02-ChasingCorporate.mp3" title="Indie rock by AdamCaptured" type="audio/mpeg"/>
+	<source src="../media/AirReview-Landmarks-02-ChasingCorporate.mp3" title="Winner by kristijanf" type="audio/mpeg"/>
+	<source src="../media/AirReview-Landmarks-02-ChasingCorporate.mp3" title="Get Out of My Way by AdamCaptured" type="audio/mpeg"/>
+	<source src="../media/AirReview-Landmarks-02-ChasingCorporate.mp3" title="Positive Thinking by BeatheBeat" type="audio/mpeg"/>
+	<source src="../media/AirReview-Landmarks-02-ChasingCorporate.mp3" title="Glitchy Digital Crystal Logo #07 by alkis" type="audio/mpeg"/>
+</audio>
+</div><!-- close .progression-playlist-height -->
+
+
+
+<script>
+$('.progression-single').mediaelementplayer({
+	defaultVideoWidth: 480, // if the <video width> is not specified, this is the default
+	defaultVideoHeight: 270,    // if the <video height> is not specified, this is the default
+	audioWidth: 350, // width of audio player
+	audioHeight:40, // height of audio player
+	startVolume: 0.5, // initial volume when the player starts
+	features: ['playpause','current','progress','duration','tracks','volume','fullscreen']
+	});
+</script>
+
+
+<script>
+$('.progression-playlist').mediaelementplayer({
+	audioWidth: 500, // width of audio player
+	audioHeight:40, // height of audio player
+	startVolume: 0.5, // initial volume when the player starts
+	loop: false, // useful for <audio> player loops
+	features: ['playlistfeature', 'prevtrack', 'playpause', 'nexttrack','current', 'progress', 'duration', 'volume', 'playlist'],
+	playlist: true, //Playlist Show
+	playlistposition: 'bottom' //Playlist Location
+	});
+</script>
+
+
+</body>
+</html>
+

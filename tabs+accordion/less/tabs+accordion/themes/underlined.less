@@ -1,0 +1,167 @@
+@import url("../../clearfix.less");
+@import url("../../prefixed.less");
+@rem: 16px;
+
+.underlined {
+margin: 3*@rem 0;
+
+	&:focus {
+	outline: none;
+	}
+
+	&.accordion {
+
+		> section {
+		padding: 1.5*@rem 0;
+
+			> * {
+			max-width: 100%;
+			}
+
+			> :first-child {
+			margin-top: 0;
+
+				.js & {
+				border-bottom: 1px solid;
+				font-size: inherit;
+				font-weight: inherit;
+				margin: 0;
+				padding: 0.75*@rem 0;
+
+					+ * > * {
+					padding: 1.5*@rem 0;
+
+						> * {
+						max-width: 100%;
+						}
+
+						> :first-child {
+						margin-top: 0;
+						}
+
+						> :last-child {
+						margin-bottom: 0;
+						}
+					}
+				}
+			}
+
+			.js & {
+			padding: 0;
+
+				&[aria-expanded="true"] > :first-child {
+				border-bottom-width: 4px;
+				}
+			}
+
+			> :last-child {
+			margin-bottom: 0;
+			}
+		}
+	}
+
+	&.tabs {
+
+		.js &.hide-title > section > :first-child + * {
+		margin-top: 0;
+		}
+
+		> section {
+		.box-sizing(border-box);
+		padding: 1.5*@rem 0;
+
+			> :first-child {
+			margin-top: 0;
+			}
+
+			.js & > * > * {
+
+				> * {
+				max-width: 100%;
+				}
+
+				> :first-child {
+				margin-top: 0;
+				}
+
+				> :last-child {
+				margin-bottom: 0;
+				}
+			}
+
+			> :last-child {
+			margin-bottom: 0;
+			}
+
+			+ section {
+			margin-top: -1px;
+
+				.js & {
+				margin-top: 0;
+				}
+			}
+		}
+
+		> ul {
+		.clearfix;
+
+		border-bottom: 1px solid;
+		display: table;
+		list-style: none;
+		margin: 0;
+		padding: 0;
+		width: 100%;
+
+			> li {
+			float: left;
+			padding: 0.75*@rem 0;
+
+				&.current {
+				border-bottom: 3px solid;
+				pointer-events: none;
+				}
+
+				+ li {
+				margin-left: 1.5*@rem;
+				}
+			}
+		}
+	}
+
+	.color-scheme(@color) {
+
+		.js & &.accordion > section > :first-child {
+		border-bottom-color: @color;
+		}
+
+		&.tabs > ul {
+		border-bottom-color: @color;
+
+			> li.current {
+			border-bottom-color: @color;
+			}
+		}
+	}
+
+	.color-scheme(#222222);
+
+	&.apple-green {
+	.color-scheme(#8DB600);
+	}
+
+	&.avocado {
+	.color-scheme(#568203);
+	}
+
+	&.azure {
+	.color-scheme(#007FFF);
+	}
+
+	&.carrot-orange {
+	.color-scheme(#ED9121);
+	}
+
+	&.tomato {
+	.color-scheme(#FF6347);
+	}
+}

@@ -1,0 +1,16 @@
+/* nested intance z-index visbility fix */
+
+.js .tabs .tabs > section {
+visibility: hidden;
+}
+
+.js .tabs > section[aria-expanded="true"] .tabs > section[aria-expanded="true"] {
+visibility: visible;
+}
+
+/* Minimal 2 theme */
+
+.js .accordion > section[aria-expanded="true"] > :first-child {
+background-color: transparent;
+color: inherit;
+}

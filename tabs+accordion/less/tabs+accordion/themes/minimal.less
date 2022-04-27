@@ -1,0 +1,141 @@
+@import url("../../clearfix.less");
+@import url("../../prefixed.less");
+@rem: 16px;
+
+.minimal {
+@background-color: #FFFFFF;
+@border-color: #DDDDDD;
+
+margin: 1.5*@rem 0;
+
+	&:focus {
+	outline: none;
+	}
+
+	&.accordion {
+
+		> section {
+		background-color: @background-color;
+		border: 1px solid @border-color;
+		padding: 1.5*@rem;
+
+			> * {
+			max-width: 100%;
+			}
+
+			> :first-child {
+			margin-top: 0;
+			}
+
+			.js & {
+			padding: 0;
+
+				> :first-child {
+				font-size: inherit;
+				font-weight: inherit;
+				margin: 0;
+				padding: 0.75*@rem 1.5*@rem;
+
+					+ * > * {
+					padding: 1.5*@rem;
+
+						> * {
+						max-width: 100%;
+						}
+
+						> :first-child {
+						margin-top: 0;
+						}
+
+						> :last-child {
+						margin-bottom: 0;
+						}
+					}
+				}
+			}
+
+			> :last-child {
+			margin-bottom: 0;
+			}
+
+			+ section {
+			margin-top: -1px;
+			}
+		}
+	}
+
+	&.tabs {
+
+		.js &.hide-title > section > :first-child + * {
+		margin-top: 0;
+		}
+
+		> section {
+		background-color: @background-color;
+		border: 1px solid @border-color;
+		.box-sizing(border-box);
+		padding: 1.5*@rem;
+
+			> * {
+			max-width: 100%;
+			}
+
+			> :first-child {
+			margin-top: 0;
+			}
+
+			.js & > * > * {
+			margin-top: 0;
+
+				> * {
+				max-width: 100%;
+				}
+
+				> :first-child {
+				margin-top: 0;
+				}
+
+				> :last-child {
+				margin-bottom: 0;
+				}
+			}
+
+			> :last-child {
+			margin-bottom: 0;
+			}
+
+			+ section {
+			margin-top: -1px;
+
+				.js & {
+				margin-top: 0;
+				}
+			}
+		}
+
+		> ul {
+		.clearfix;
+
+		display: table;
+		list-style: none;
+		margin: 0 0 -1px 0;
+		padding: 0;
+
+			> li {
+			background-color: @background-color;
+			border: 1px solid @border-color;
+			float: left;
+			padding: 0.75*@rem 1.5*@rem;
+
+				&.current {
+				border-bottom-color: @background-color;
+				pointer-events: none;
+				}
+
+				+ li {
+				border-left: none;
+				}
+			}
+		}
+	}
+}

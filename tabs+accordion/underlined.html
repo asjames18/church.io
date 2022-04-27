@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8" />
+
+	<title>Tabs + Accordion</title>
+
+	<link href="http://fonts.googleapis.com/css?family=Lato:400,300italic,300,100italic,100,400italic,700,700italic,900,900italic" rel="stylesheet" />
+	<link href="css/tabs+accordion/tabs+accordion.css" rel="stylesheet" />
+	<link href="css/tabs+accordion/themes/underlined.css" rel="stylesheet" />
+	<!--[if IE 8]><link href="css/tabs+accordion/ie8.css" rel="stylesheet" /><![endif]-->
+	<link href="demo/css/style.css" rel="stylesheet" />
+
+	<script src="js/min/modernizr.js"></script>
+</head>
+
+<body>
+	<header role="banner">
+		<h1><a href="http://lamovo.com/tabs+accordion">Tabs + Accordion</a></h1>
+	</header>
+
+	<div role="main">
+		<ul class="theme">
+			<li><a href="index.html"><img alt="Minimal" src="demo/img/minimal.png" /></a></li>
+			<li><a href="detached.html"><img alt="Detached" src="demo/img/detached.png" /></a></li>
+			<li><a href="minimal-2.html"><img alt="Minimal 2" src="demo/img/minimal-2.png" /></a></li>
+			<li class="current">
+				<a href="underlined.html"><img alt="Underlined" src="demo/img/underlined.png" /></a>
+
+				<ul class="color-scheme">
+					<li class="apple-green">Apple green</li>
+					<li class="avocado">Avocado</li>
+					<li class="azure">Azure</li>
+					<li class="carrot-orange">Carrot orange</li>
+					<li class="tomato">Tomato</li>
+				</ul>
+			</li>
+		</ul>
+
+		<div class="tabs underlined hide-title cross-fade">
+			<section>
+				<h1>Responsive</h1>
+
+				<p>Go ahead, scale the browser up and down and see things change! When you reach far enough, you will notice Responsive Switch transforming Tabs into Accordion.</p>
+			</section>
+
+			<section>
+				<h1>Accessible</h1>
+
+				<p>To test out keyboard accessibility:</p>
+
+				<ol>
+					<li>Set focus on this element by clicking on it or keyboard tabbing to it.</li>
+					<li>Press the right arrow key to navigate to the next panel.</li>
+					<li>Or press the left arrow key to navigate to the previous panel.</li>
+				</ol>
+
+				<p>Now, let's check how things look with JavaScript disabled:</p>
+
+				<ol>
+					<li>Open your browser's preferences.</li>
+					<li>Disable JavaScript.</li>
+					<li>Refresh the page.</li>
+					<li>All content should be right there.</li>
+				</ol>
+			</section>
+
+			<section>
+				<h1>Save State</h1>
+
+				<p>The Save State option is enabled. To check it out, refresh the page. Notice how the active panel remains.</p>
+			</section>
+		</div>
+
+		<p>To show how Tabs + Accordion integrates and behaves around other page elements, this little paragraph hangs around.</p>
+	</div>
+
+	<script data-main="js/main.js" src="js/min/require.js"></script>
+</body>
+</html>

@@ -1,0 +1,603 @@
+
+.grid *, .grid *:after, .grid *:before { -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; }
+body, html { font-size: 100%; padding: 0; margin: 0;}
+
+/* Clearfix hack by Nicolas Gallagher: http://nicolasgallagher.com/micro-clearfix-hack/ */
+.clearfix:before, .clearfix:after { content: " "; display: table; }
+.clearfix:after { clear: both; }
+
+.grid {
+	padding: 0px;
+	max-width: 100%;
+	margin: 0 auto;
+	list-style: none;
+	text-align: center;
+}
+
+.grid li {
+	width: 25%;
+	margin: 0;
+	padding: 0;
+	text-align: left;
+	position: relative;
+	float: left;
+	display: inline-block;
+}
+
+.grid .team-block {
+	margin: 0;
+	position: relative;
+	text-align: center;
+}
+
+.grid .team-block .team-img {
+	max-width: 100%;
+	display: block;
+	position: relative;
+}
+
+.grid .team-info {
+	position: absolute;
+	top: 0;
+	left: 0;
+	padding: 20px;
+	color: #ed4e6e;
+}
+
+.grid .team-info h3 {
+	margin: 0;
+	color: #FFFFFF !important;
+    font-family: "Open_Sans_B";
+    font-size: 36px;
+    font-weight: normal;
+    line-height: 41px;
+    text-align: left;
+    text-transform: none !important;
+}
+
+.grid .team-info h6 {
+	margin-top: 20px;
+	color: #FFFFFF !important;
+    font-family: "Open_Sans_L";
+    font-size: 24px;
+    font-weight: normal;
+    line-height: 31px;
+    text-align: left;
+    text-transform: none !important;
+}
+.grid .team-info p {
+	color: #fff !important;
+	margin-top: 20px !important;
+	font-size: 14px !important;
+	line-height: 21px !important;
+    text-align: left;
+	font-weight: normal !important;
+    font-family: "Open_Sans_R" !important;
+}
+/*.grid .team-info span:before {
+	content: 'by ';
+}*/
+
+.grid .team-info a {
+}
+.grid .team-info a:hover{
+}
+
+/* Individual Caption Styles */
+
+/* Caption Style 3 */
+.cs-style-3 .team-block {
+	overflow: hidden;
+}
+
+.cs-style-3 .team-block .team-img {
+	-webkit-transition: -webkit-transform 0.4s;
+	-moz-transition: -moz-transform 0.4s;
+	transition: transform 0.4s;
+}
+
+.cs-style-3 .team-block:hover .team-img,
+.cs-style-3 .team-block.cs-hover .team-img {
+	-webkit-transform: translateY(0px);
+	-moz-transform: translateY(0px);
+	-ms-transform: translateY(0px);
+	transform: translateY(0px);
+}
+
+
+/* Animated Text Box for Home Pg */
+
+.cs-style-3 .team-info {
+	height: 100%;
+	width: 100%;
+	top: auto;
+	bottom: 20px;
+	opacity: 1;
+	-webkit-transform: translateY(100%);
+	-moz-transform: translateY(100%);
+	-ms-transform: translateY(100%);
+	transform: translateY(100%);
+	-webkit-transition: -webkit-transform 0.4s, opacity 0.1s 0.3s;
+	-moz-transition: -moz-transform 0.4s, opacity 0.1s 0.3s;
+	transition: transform 0.4s, opacity 0.1s 0.3s;
+}
+
+.cs-style-3 .team-block:hover .team-info,
+.cs-style-3 .team-block.cs-hover .team-info {
+	opacity: 1;
+	-webkit-transform: translateY(20px);
+	-moz-transform: translateY(20px);
+	-ms-transform: translateY(20px);
+	transform: translateY(20px);
+	-webkit-transition: -webkit-transform 0.4s, opacity 0.1s;
+	-moz-transition: -moz-transform 0.4s, opacity 0.1s;
+	transition: transform 0.4s, opacity 0.1s;
+}
+
+.cs-style-3 .team-info a {
+	
+}
+
+
+
+
+@media only screen and (max-width: 1570px){
+	.grid .team-info {
+	padding: 24px;
+	}
+
+	.grid .team-info h3 {
+	margin-top: 32px;
+    font-size: 26px;
+    line-height: 26px;
+	}
+
+	.grid .team-info p {
+	margin-top: 16px !important;
+	font-size: 21px !important;
+	line-height: 21px !important;
+	}
+	.cs-style-3 .team-info {
+	height: 100%;
+	width: 100%;
+	top: auto;
+	bottom: 10px;
+	opacity: 1;
+	-webkit-transform: translateY(100%);
+	-moz-transform: translateY(100%);
+	-ms-transform: translateY(100%);
+	transform: translateY(100%);
+	-webkit-transition: -webkit-transform 0.4s, opacity 0.1s 0.3s;
+	-moz-transition: -moz-transform 0.4s, opacity 0.1s 0.3s;
+	transition: transform 0.4s, opacity 0.1s 0.3s;
+	}
+
+	.cs-style-3 .team-block:hover .team-info,
+	.cs-style-3 .team-block.cs-hover .team-info {
+	opacity: 1;
+	-webkit-transform: translateY(10px);
+	-moz-transform: translateY(10px);
+	-ms-transform: translateY(10px);
+	transform: translateY(10px);
+	-webkit-transition: -webkit-transform 0.4s, opacity 0.1s;
+	-moz-transition: -moz-transform 0.4s, opacity 0.1s;
+	transition: transform 0.4s, opacity 0.1s;
+	}
+		
+}
+
+
+@media (min-width: 2000px) and (max-width: 3000px){
+	.grid .team-info {
+	padding: 30px;
+	}
+
+	.grid .team-info h3 {
+	margin-top: 64px;
+    font-size: 32px;
+    line-height: 32px;
+	}
+
+	.grid .team-info p {
+	margin-top: 20px !important;
+	font-size: 26px !important;
+	line-height: 26px !important;
+	}
+	.cs-style-3 .team-info {
+	height: 100%;
+	width: 100%;
+	top: auto;
+	bottom: 10px;
+	opacity: 1;
+	-webkit-transform: translateY(100%);
+	-moz-transform: translateY(100%);
+	-ms-transform: translateY(100%);
+	transform: translateY(100%);
+	-webkit-transition: -webkit-transform 0.4s, opacity 0.1s 0.3s;
+	-moz-transition: -moz-transform 0.4s, opacity 0.1s 0.3s;
+	transition: transform 0.4s, opacity 0.1s 0.3s;
+	}
+
+	.cs-style-3 .team-block:hover .team-info,
+	.cs-style-3 .team-block.cs-hover .team-info {
+	opacity: 1;
+	-webkit-transform: translateY(10px);
+	-moz-transform: translateY(10px);
+	-ms-transform: translateY(10px);
+	transform: translateY(10px);
+	-webkit-transition: -webkit-transform 0.4s, opacity 0.1s;
+	-moz-transition: -moz-transform 0.4s, opacity 0.1s;
+	transition: transform 0.4s, opacity 0.1s;
+	}
+		
+}
+
+
+
+@media (min-width: 1382px) and (max-width: 2000px){
+	.grid .team-info {
+	padding: 24px;
+	}
+
+	.grid .team-info h3 {
+	margin-top: 32px;
+    font-size: 26px;
+    line-height: 26px;
+	}
+
+	.grid .team-info p {
+	margin-top: 16px !important;
+	font-size: 21px !important;
+	line-height: 21px !important;
+	}
+	.cs-style-3 .team-info {
+	height: 100%;
+	width: 100%;
+	top: auto;
+	bottom: 10px;
+	opacity: 1;
+	-webkit-transform: translateY(100%);
+	-moz-transform: translateY(100%);
+	-ms-transform: translateY(100%);
+	transform: translateY(100%);
+	-webkit-transition: -webkit-transform 0.4s, opacity 0.1s 0.3s;
+	-moz-transition: -moz-transform 0.4s, opacity 0.1s 0.3s;
+	transition: transform 0.4s, opacity 0.1s 0.3s;
+	}
+
+	.cs-style-3 .team-block:hover .team-info,
+	.cs-style-3 .team-block.cs-hover .team-info {
+	opacity: 1;
+	-webkit-transform: translateY(10px);
+	-moz-transform: translateY(10px);
+	-ms-transform: translateY(10px);
+	transform: translateY(10px);
+	-webkit-transition: -webkit-transform 0.4s, opacity 0.1s;
+	-moz-transition: -moz-transform 0.4s, opacity 0.1s;
+	transition: transform 0.4s, opacity 0.1s;
+	}
+		
+}
+
+
+@media (min-width: 1057px) and (max-width: 1382px){
+	.grid .team-info {
+	padding: 20px;
+	}
+
+	.grid .team-info h3 {
+	margin-top: 28px;
+    font-size: 23px;
+    line-height: 24px;
+	}
+
+	.grid .team-info p {
+	margin-top: 12px !important;
+	font-size: 16px !important;
+	line-height: 17px !important;
+	}
+	.cs-style-3 .team-info {
+	height: 100%;
+	width: 100%;
+	top: auto;
+	bottom: 10px;
+	opacity: 1;
+	-webkit-transform: translateY(100%);
+	-moz-transform: translateY(100%);
+	-ms-transform: translateY(100%);
+	transform: translateY(100%);
+	-webkit-transition: -webkit-transform 0.4s, opacity 0.1s 0.3s;
+	-moz-transition: -moz-transform 0.4s, opacity 0.1s 0.3s;
+	transition: transform 0.4s, opacity 0.1s 0.3s;
+	}
+
+	.cs-style-3 .team-block:hover .team-info,
+	.cs-style-3 .team-block.cs-hover .team-info {
+	opacity: 1;
+	-webkit-transform: translateY(10px);
+	-moz-transform: translateY(10px);
+	-ms-transform: translateY(10px);
+	transform: translateY(10px);
+	-webkit-transition: -webkit-transform 0.4s, opacity 0.1s;
+	-moz-transition: -moz-transform 0.4s, opacity 0.1s;
+	transition: transform 0.4s, opacity 0.1s;
+	}
+		
+}
+
+@media (max-width: 1057px){
+	.grid .team-info {
+	padding: 17px;
+	}
+
+	.grid .team-info h3 {
+	margin-top: 26px;
+    font-size: 18px;
+    line-height: 22px;
+	}
+
+	.grid .team-info p {
+	margin-top: 10px !important;
+	font-size: 14px !important;
+	line-height: 17px !important;
+	}
+	.cs-style-3 .team-info {
+	height: 100%;
+	width: 100%;
+	top: auto;
+	bottom: 10px;
+	opacity: 1;
+	-webkit-transform: translateY(100%);
+	-moz-transform: translateY(100%);
+	-ms-transform: translateY(100%);
+	transform: translateY(100%);
+	-webkit-transition: -webkit-transform 0.4s, opacity 0.1s 0.3s;
+	-moz-transition: -moz-transform 0.4s, opacity 0.1s 0.3s;
+	transition: transform 0.4s, opacity 0.1s 0.3s;
+	}
+
+	.cs-style-3 .team-block:hover .team-info,
+	.cs-style-3 .team-block.cs-hover .team-info {
+	opacity: 1;
+	-webkit-transform: translateY(10px);
+	-moz-transform: translateY(10px);
+	-ms-transform: translateY(10px);
+	transform: translateY(10px);
+	-webkit-transition: -webkit-transform 0.4s, opacity 0.1s;
+	-moz-transition: -moz-transform 0.4s, opacity 0.1s;
+	transition: transform 0.4s, opacity 0.1s;
+	}
+		
+}
+
+@media (min-width: 768px) and (max-width: 960px){
+	.grid .team-info {
+	padding: 14px;
+	}
+
+	.grid .team-info h3 {
+	margin-top: 22px;
+    font-size: 15px;
+    line-height: 18px;
+	}
+
+	.grid .team-info p {
+	margin-top: 8px !important;
+	font-size: 11px !important;
+	line-height: 14px !important;
+	}
+	.cs-style-3 .team-info {
+	height: 100%;
+	width: 100%;
+	top: auto;
+	bottom: 10px;
+	opacity: 1;
+	-webkit-transform: translateY(100%);
+	-moz-transform: translateY(100%);
+	-ms-transform: translateY(100%);
+	transform: translateY(100%);
+	-webkit-transition: -webkit-transform 0.4s, opacity 0.1s 0.3s;
+	-moz-transition: -moz-transform 0.4s, opacity 0.1s 0.3s;
+	transition: transform 0.4s, opacity 0.1s 0.3s;
+	}
+
+	.cs-style-3 .team-block:hover .team-info,
+	.cs-style-3 .team-block.cs-hover .team-info {
+	opacity: 1;
+	-webkit-transform: translateY(10px);
+	-moz-transform: translateY(10px);
+	-ms-transform: translateY(10px);
+	transform: translateY(10px);
+	-webkit-transition: -webkit-transform 0.4s, opacity 0.1s;
+	-moz-transition: -moz-transform 0.4s, opacity 0.1s;
+	transition: transform 0.4s, opacity 0.1s;
+	}
+		
+}
+
+@media (min-width: 640px) and (max-width: 768px){
+
+	.grid .team-info {
+	padding: 13px;
+	}
+
+	.grid .team-info h3 {
+	margin-top: 15px;
+    font-size: 13px;
+    line-height: 15px;
+	}
+
+	.grid .team-info p {
+	margin-top: 5px !important;
+	font-size: 9px !important;
+	line-height: 12px !important;
+	}
+	.cs-style-3 .team-info {
+	height: 100%;
+	width: 100%;
+	top: auto;
+	bottom: 10px;
+	opacity: 1;
+	-webkit-transform: translateY(100%);
+	-moz-transform: translateY(100%);
+	-ms-transform: translateY(100%);
+	transform: translateY(100%);
+	-webkit-transition: -webkit-transform 0.4s, opacity 0.1s 0.3s;
+	-moz-transition: -moz-transform 0.4s, opacity 0.1s 0.3s;
+	transition: transform 0.4s, opacity 0.1s 0.3s;
+	}
+
+	.cs-style-3 .team-block:hover .team-info,
+	.cs-style-3 .team-block.cs-hover .team-info {
+	opacity: 1;
+	-webkit-transform: translateY(10px);
+	-moz-transform: translateY(10px);
+	-ms-transform: translateY(10px);
+	transform: translateY(10px);
+	-webkit-transition: -webkit-transform 0.4s, opacity 0.1s;
+	-moz-transition: -moz-transform 0.4s, opacity 0.1s;
+	transition: transform 0.4s, opacity 0.1s;
+	}
+		
+}
+
+
+
+/* MOBILE*/
+
+@media (max-width: 640px){
+
+	.grid .team-info {
+	padding: 12px;
+	}
+
+	.grid .team-info h3 {
+	margin-top: 10px;
+    font-size: 10px;
+    line-height: 10px;
+	}
+
+	.grid .team-info p {
+	margin-top: 3px !important;
+	font-size: 8px !important;
+	line-height: 10px !important;
+	}
+	.cs-style-3 .team-info {
+	height: 100%;
+	width: 100%;
+	top: auto;
+	bottom: 10px;
+	opacity: 1;
+	-webkit-transform: translateY(100%);
+	-moz-transform: translateY(100%);
+	-ms-transform: translateY(100%);
+	transform: translateY(100%);
+	-webkit-transition: -webkit-transform 0.4s, opacity 0.1s 0.3s;
+	-moz-transition: -moz-transform 0.4s, opacity 0.1s 0.3s;
+	transition: transform 0.4s, opacity 0.1s 0.3s;
+	}
+
+	.cs-style-3 .team-block:hover .team-info,
+	.cs-style-3 .team-block.cs-hover .team-info {
+	opacity: 1;
+	-webkit-transform: translateY(10px);
+	-moz-transform: translateY(10px);
+	-ms-transform: translateY(10px);
+	transform: translateY(10px);
+	-webkit-transition: -webkit-transform 0.4s, opacity 0.1s;
+	-moz-transition: -moz-transform 0.4s, opacity 0.1s;
+	transition: transform 0.4s, opacity 0.1s;
+	}
+		
+}
+
+@media (max-width: 480px){
+
+	.grid .team-info {
+	padding: 10px;
+	}
+
+	.grid .team-info h3 {
+	margin-top: 7px;
+    font-size: 8px;
+    line-height: 10px;
+	}
+
+	.grid .team-info p {
+	margin-top: 3px !important;
+	font-size: 6px !important;
+	line-height: 8px !important;
+	}
+	.cs-style-3 .team-info {
+	height: 100%;
+	width: 100%;
+	top: auto;
+	bottom: 10px;
+	opacity: 1;
+	-webkit-transform: translateY(100%);
+	-moz-transform: translateY(100%);
+	-ms-transform: translateY(100%);
+	transform: translateY(100%);
+	-webkit-transition: -webkit-transform 0.4s, opacity 0.1s 0.3s;
+	-moz-transition: -moz-transform 0.4s, opacity 0.1s 0.3s;
+	transition: transform 0.4s, opacity 0.1s 0.3s;
+	}
+
+	.cs-style-3 .team-block:hover .team-info,
+	.cs-style-3 .team-block.cs-hover .team-info {
+	opacity: 1;
+	-webkit-transform: translateY(10px);
+	-moz-transform: translateY(10px);
+	-ms-transform: translateY(10px);
+	transform: translateY(10px);
+	-webkit-transition: -webkit-transform 0.4s, opacity 0.1s;
+	-moz-transition: -moz-transform 0.4s, opacity 0.1s;
+	transition: transform 0.4s, opacity 0.1s;
+	}
+	
+}
+
+@media (max-width: 320px){
+
+	.grid .team-info h3 {
+	margin-top: 7px;
+    font-size: 36px;
+    line-height: 41px;
+	}
+	.grid .team-info p {
+	margin-top: 7px !important;
+	font-size: 14px !important;
+	line-height: 21px !important;
+	}
+
+	.grid {
+		padding: 0px;
+	}
+	.grid li {
+		width: 100%;
+		min-width: 350px;
+	}
+	
+	.grid .team-block .team-img {
+	max-width: 92%;
+	display: block;
+	position: relative;
+	}
+	
+	.cs-style-3 .team-info {
+	max-height: 50px;
+	width: 100%;
+	top: 0px;
+	bottom: 0px;
+	opacity: 1;
+	}
+	.cs-style-3 .team-block:hover .team-info,
+	.cs-style-3 .team-block.cs-hover .team-info {
+	opacity: 1;
+	-webkit-transform: translateY(0px);
+	-moz-transform: translateY(0px);
+	-ms-transform: translateY(0px);
+	transform: translateY(0px);
+	}
+	
+}
